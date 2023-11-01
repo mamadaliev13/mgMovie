@@ -9,7 +9,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "uz.madgeeks.mimovie"
+        applicationId "uz.mamadaliev.mimovie"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -32,7 +32,7 @@ android {
         it.buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/\""
         it.buildConfigField "String", "BASE_DATABASE", "\"movie_db\""
         it.buildConfigField "String", "APP_PREFS_NAME", "\"movie\""
-        it.buildConfigField "String", "TOKEN", "\"b24620bd8996fe3c48c7298bfa0fd24f\""
+        it.buildConfigField "String", "TOKEN", "\"98c5b9333f8a7c3f8bc1d3dac73e9735\""
         it.buildConfigField "String", "BASE_IMAGE_URL", "\"https://image.tmdb.org/t/p/w500\""
         it.buildConfigField "java.util.Date", "BUILD_TIME", "new java.util.Date(" + System.currentTimeMillis() + "L)"
     }
@@ -99,4 +99,7 @@ dependencies {
 
     // photo view
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    // exoplayer
+    implementation "com.google.android.exoplayer:exoplayer:2.16.1"
 }

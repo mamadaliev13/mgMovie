@@ -360,6 +360,36 @@
                         android:layout_height="match_parent"
                         tools:listitem="@layout/item_actor" />
 
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_padding_16"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Similar"
+                        android:textColor="@color/deep_blue_400"
+                        android:textSize="@dimen/text_size_24" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/similarsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_actor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_padding_16"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Reviews"
+                        android:textColor="@color/deep_blue_400"
+                        android:textSize="@dimen/text_size_24" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reviewsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_actor" />
+
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="150dp" />

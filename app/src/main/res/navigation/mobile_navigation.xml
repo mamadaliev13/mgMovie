@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="uz.madgeeks.mimovie.presentation.home.HomeFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/navigation_genre"
-        android:name="uz.madgeeks.mimovie.presentation.genres_list.GenresListFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.genres_list.GenresListFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_genres_list">
 
@@ -50,7 +50,7 @@
 
     <fragment
         android:id="@+id/navigation_splash"
-        android:name="uz.madgeeks.mimovie.presentation.SplashFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.SplashFragment"
         android:label=""
         tools:layout="@layout/fragment_splash">
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
-        android:name="uz.madgeeks.mimovie.presentation.movie_detail.MovieDetailFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.movie_detail.MovieDetailFragment"
         android:label="About Movie"
         tools:layout="@layout/fragment_movie_detail_third">
         <action
@@ -113,10 +113,20 @@
             app:popExitAnim="@anim/slide_out"
             app:popUpTo="@id/movieCastFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_movieDetailFragment_self"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/movieCastFragment"
+            app:popUpToInclusive="true"/>
+
     </fragment>
     <fragment
         android:id="@+id/genreFragment"
-        android:name="uz.madgeeks.mimovie.presentation.genre.GenreFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.genre.GenreFragment"
         android:label="Genre"
         tools:layout="@layout/fragment_genre">
 
@@ -142,7 +152,7 @@
 
     <fragment
         android:id="@+id/navigation_actors"
-        android:name="uz.madgeeks.mimovie.presentation.actors_list.ActorsListFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.actors_list.ActorsListFragment"
         android:label="Famous Actors"
         tools:layout="@layout/fragment_actors_list">
         <action
@@ -157,7 +167,7 @@
     </fragment>
     <fragment
         android:id="@+id/actorsFragment"
-        android:name="uz.madgeeks.mimovie.presentation.actors.ActorsFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.actors.ActorsFragment"
         android:label="About Actor"
         tools:layout="@layout/fragment_actors">
         <action
@@ -191,7 +201,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_search"
-        android:name="uz.madgeeks.mimovie.presentation.search.SearchFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.search.SearchFragment"
         android:label="@string/search"
         tools:layout="@layout/fragment_search">
         <action
@@ -206,7 +216,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_tvshows"
-        android:name="uz.madgeeks.mimovie.presentation.tv_shows.TVShowsFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.tv_shows.TVShowsFragment"
         android:label="TV Shows"
         tools:layout="@layout/fragment_t_v_shows">
         <action
@@ -221,12 +231,12 @@
     </fragment>
     <fragment
         android:id="@+id/imageViewerFragment"
-        android:name="uz.madgeeks.mimovie.presentation.ImageViewerFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.ImageViewerFragment"
         android:label=""
         tools:layout="@layout/fragment_image_viewer" />
     <fragment
         android:id="@+id/TVShowDetailFragment"
-        android:name="uz.madgeeks.mimovie.presentation.tv_show_details.TVShowDetailFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.tv_show_details.TVShowDetailFragment"
         android:label=""
         tools:layout="@layout/fragment_t_v_show_detail">
         <action
@@ -286,7 +296,7 @@
     </fragment>
     <fragment
         android:id="@+id/genreTVFragment"
-        android:name="uz.madgeeks.mimovie.presentation.genre.GenreTVFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.genre.GenreTVFragment"
         android:label=""
         tools:layout="@layout/fragment_genre_t_v">
         <action
@@ -301,16 +311,30 @@
     </fragment>
     <fragment
         android:id="@+id/trailersFragment"
-        android:name="uz.madgeeks.mimovie.presentation.trailers.TrailersFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.trailers.TrailersFragment"
         android:label="Videos"
-        tools:layout="@layout/fragment_trailers" />
-    <fragment
+        tools:layout="@layout/fragment_trailers" >
+        <action
+            android:id="@+id/action_trailersFragment_to_playerFragment"
+            app:destination="@id/playerFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/playerFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+     <fragment
         android:id="@+id/movieTrailersFragment"
-        android:name="uz.madgeeks.mimovie.presentation.trailers.MovieTrailersFragment"
-        android:label="Videos" />
+        android:name="uz.mamadaliev.mimovie.presentation.trailers.MovieTrailersFragment"
+        android:label="Videos" >
+        <action
+            android:id="@+id/action_movieTrailersFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/movieCastFragment"
-        android:name="uz.madgeeks.mimovie.presentation.cast_list.MovieCastFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.cast_list.MovieCastFragment"
         android:label="Casts"
         tools:layout="@layout/fragment_movie_cast">
         <action
@@ -325,7 +349,7 @@
     </fragment>
     <fragment
         android:id="@+id/castFragment"
-        android:name="uz.madgeeks.mimovie.presentation.cast_list.CastFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.cast_list.CastFragment"
         android:label="Casts">
         <action
             android:id="@+id/action_castFragment_to_actorsFragment"
@@ -337,14 +361,9 @@
             app:popUpTo="@id/actorsFragment"
             app:popUpToInclusive="true" />
     </fragment>
-    <activity
-        android:id="@+id/youtubeActivity"
-        android:name="uz.madgeeks.mimovie.presentation.YoutubeActivity"
-        android:label="activity_youtube"
-        tools:layout="@layout/activity_youtube" />
     <fragment
         android:id="@+id/seasonDetailsFragment"
-        android:name="uz.madgeeks.mimovie.presentation.season_details.SeasonDetailsFragment"
+        android:name="uz.mamadaliev.mimovie.presentation.season_details.SeasonDetailsFragment"
         android:label="Episodes"
         tools:layout="@layout/fragment_season_details" >
         <action
@@ -357,4 +376,8 @@
             app:popUpTo="@id/imageViewerFragment"
             app:popUpToInclusive="true"/>
     </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="uz.mamadaliev.mimovie.PlayerFragment"
+        android:label="Player" />
 </navigation>
